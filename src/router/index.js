@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import FunnelCanvasView from '../views/FunnelCanvasView.vue'
+import FunnelCanvas2View from '../views/FunnelCanvas2View.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'FunnelCanvasView',
+    component: FunnelCanvasView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
+    path: '/FunnelCanvas2',
+    name: 'FunnelCanvas2View',
+    component: FunnelCanvas2View
   }
 ]
 

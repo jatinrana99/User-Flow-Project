@@ -1,18 +1,18 @@
 <template>
     <section id="actions">
-<SliderBarTitle></SliderBarTitle>
-<Content></Content>
+<SliderBarTitle2></SliderBarTitle2>
+<Content2></Content2>
     </section>
 </template>
 
 <script>
-import SliderBarTitle from './SliderBarTitle.vue';
-import Content from './Content.vue';
+import SliderBarTitle2 from './SliderBarTitle2.vue';
+import Content2 from './Content2.vue';
 
 export default {
-    name: `Actions`,
-    components: { SliderBarTitle,
-    Content }
+    name: `Action2`,
+    components: { SliderBarTitle2,
+    Content2 }
 }
 </script>
 
