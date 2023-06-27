@@ -1,14 +1,18 @@
 <template>
-  <FunnelCanvas></FunnelCanvas>
+  <HelloWorld />
 </template>
 
 <script>
-import FunnelCanvas from '@/components/FunnelCanvas.vue';
+import { defineComponent } from 'vue';
 
-export default {
+// Components
+import HelloWorld from '../components/HelloWorld.vue';
+
+export default defineComponent({
   name: 'HomeView',
+
   components: {
-    FunnelCanvas
-  }
-}
+    HelloWorld,
+  },
+});
 </script>
