@@ -7,6 +7,12 @@
         <section id="draggableItemMenu"> 
         <div id="addAction">Add actions</div>
         <div>
+            <!-- <p>{{ this.$store.state.selectedData }}</p> -->
+            <!-- <p>{{ this.$store.state.addTag.selectedData }}</p> -->
+            <p>{{ this.$store.state.addTag.selectedData[1] }}</p>
+            <p>{{ this.$store.state.addTag.selectedData[0] }}</p>
+        </div>
+        <div>
             <i class="fa-regular fa-plus" id="plus"  @click="addAction()"></i>
         </div>    
         </section>
