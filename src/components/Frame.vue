@@ -12,7 +12,7 @@
                 </div>
                 </div>
 
-
+<!-- 
                 <div class="itemBlock" v-if = " arr[1] ===  this.$store.state.addTag.selectedData[2] ">
                     <div>
                         <i class="fa-solid fa-tag" id="tag"></i>
@@ -32,9 +32,9 @@
                     <i class="fa-solid fa-file-circle-check" id="tag"></i>
                     <div class="itemTitle">{{ arr[3] }}</div>
                 </div>
-                </div>
+                </div> -->
 
-                <div class="itemBlock" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[5] ">
+                <div class="itemBlock" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] ">
                     <div>
                         <i class="fa-solid fa-shield-halved" id="tag"></i>
                     <div class="itemTitle">{{ arr[4] }}</div>
