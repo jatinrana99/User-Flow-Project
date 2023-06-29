@@ -8,10 +8,15 @@
 
         <section>
                 <section>
-                <div class="itemBlock" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] ">
+                <div class="itemBlock" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] " @click = "tagCustomer()">
                     <div>
                     <i class="fa-solid fa-user-tag" id="tag"></i>
                     <div class="itemTitle">{{ arr[0] }}</div>
+                    <div id="status" v-if = " arr[5] === this.$store.state.addTag.status[0] ">
+
+                        <i class="fa-solid fa-bed" id="tag"></i>
+                        {{this.$store.state.addTag.status[0]}}
+                    </div>
                 </div>
                 </div>
 
@@ -83,18 +88,28 @@ export default {
     name:`Content`,
     data(){
         return{
-            arr:['Tag customer','Tag order','Send email notification','Select digital product','Make HTTPS request'],
+            arr:['Tag customer','Tag order','Send email notification','Select digital product','Make HTTPS request', 'Inactive'],
+
         }
     },
     methods:{
         addAction(){
             router.push({path:'/FunnelCanvas2'});
+        },
+        tagCustomer(){
+            router.push({path:'/FunnelCanvas3'});
         }
     }
 }
 </script>
 
 <style lang="sass" scoped>
+
+#tag
+    color: rgba(71, 84, 97, 1)
+
+#status
+    margin-left: 25px
 
 #content
     width: 360px

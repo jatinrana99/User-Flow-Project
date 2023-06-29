@@ -41,7 +41,7 @@
                 </div>
                 </div>
             </section>
-
+            
                                     <!-- code for drop zone text -->
             <section>
             <div v-if = " arr[5] === this.$store.state.addTag.selectedData[0]"> 
