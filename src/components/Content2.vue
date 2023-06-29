@@ -61,9 +61,9 @@
                     <br>
                    
                 </div>
-                <p>{{ this.$store.state.addTag.selectedData }}</p>
+                <!-- <p>{{ this.$store.state.addTag.selectedData }}</p>
                 <p>{{ this.$store.state.addTag.selectedData[0] }} 2</p>
-                <p>{{ this.$store.state.addTag.selectedData[1] }} 1</p>
+                <p>{{ this.$store.state.addTag.selectedData[1] }} 1</p> -->
             </section>
         </section>
 
@@ -76,6 +76,8 @@
 </template>
 
 <script>
+import router from '@/router';
+
 export default {
     name:`Content`,
     data(){
@@ -83,7 +85,7 @@ export default {
             searchText:'',
             arr:['Tag customer','Tag order','Send email notification','Select digital product','Make HTTPS request'],
             editIndex: -1,
-            selected:[],
+            selected:['close'],
         }
     },
     methods:{
@@ -114,7 +116,8 @@ export default {
             let item = this.selected[i]
             console.log(item);
             this.$store.commit('addData', item);
-            console.log(this.$store.state.addTag.item,"data in store")
+            console.log(this.$store.state.addTag.item,"data in store");
+            router.push({path:'/'})
 
             }
         }
