@@ -14,8 +14,6 @@
                 </div>
                     <input type="checkbox" class="check" @click="toggle(index)" v-model="selected" value="Tag customer">
                 </div>
-
-
                 <div class="itemBlock">
                     <div>
                         <i class="fa-solid fa-tag" id="tag"></i>
@@ -79,7 +77,7 @@
 import router from '@/router';
 
 export default {
-    name:`Content`,
+    name:`Content2`,
     data(){
         return{
             searchText:'',

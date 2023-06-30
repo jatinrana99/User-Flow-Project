@@ -4,8 +4,8 @@
 
 
 
-            <section>
-                <div class="itemBlock" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] ">
+            <section id="inputDisplay">
+                <div id="itemBlock1" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] ">
                     <div id="tagHeading">
                     <i class="fa-solid fa-user-tag" id="tag"></i>
                     <div class="itemTitle">{{ arr[0] }}</div>
@@ -146,8 +146,17 @@ export default {
     border: 1px solid
     color: rgba(227, 229, 232, 1)
     padding: 25px
-    margin-left: 20px
-    margin-top: 16px
+    margin: 16px
+    background-color: rgba(255, 255, 255, 1)
+
+#itemBlock1
+    width: 1112px
+    height: 69px
+    border-top-right-radius: 14px
+    border-top-left-radius: 14px
+    border: 1px solid
+    color: rgba(227, 229, 232, 1)
+    padding: 25px
     background-color: rgba(255, 255, 255, 1)
 
 #tag
@@ -157,5 +166,16 @@ export default {
 
 .itemTitle
     color: rgba(71, 84, 97, 1)
+
+#inputDisplay
+    // width: 1114px
+    width: 1114px
+    margin-left: -1px
+    margin-top: -1px
+    border-radius: 14px
+    // height: 908px
+    border-radius: 14px
+    border: 1px solid rgba(0, 82, 255, 1)
+    background-color: rgba(255, 255, 255, 1)
 
 </style>

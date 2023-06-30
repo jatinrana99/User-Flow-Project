@@ -2,7 +2,7 @@
     <section id="Frame">
         <section id="DropZone">
             <section id="inputDisplay">
-                <div class="itemBlock" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] ">
+                <div class="itemBlock" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] || arr[0] === this.$store.state.addTag.selectedData[3] ">
                     <div id="tagHeading">
                     <i class="fa-solid fa-shield-halved" id="tag"></i>
                     <div class="itemTitle">{{ arr[0] }}</div>
@@ -31,7 +31,8 @@
                     </section>
                     <div class="inputMain">
                         <p class="inputHeading">Request Body</p>
-                        <div class="inputVal">{{ item[4] }}</div>
+                        <div class="inputVal">{{ item[4
+                    ] }}</div>
                     </div>
                 </section>
 

@@ -34,7 +34,7 @@
                 </div>
                 </div> -->
 
-                <div class="itemBlock" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] ">
+                <div class="itemBlock" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] || arr[4] === this.$store.state.addTag.selectedData[3] ">
                     <div>
                         <i class="fa-solid fa-shield-halved" id="tag"></i>
                     <div class="itemTitle">{{ arr[4] }}</div>

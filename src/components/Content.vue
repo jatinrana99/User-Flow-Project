@@ -42,7 +42,7 @@
                 </div>
                 </div> -->
 
-                <div class="itemBlock" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] " @click="httpRequest()">
+                <div class="itemBlock" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] || arr[4] === this.$store.state.addTag.selectedData[3] "  @click="httpRequest()">
                     <div>
                         <i class="fa-solid fa-shield-halved" id="tag"></i>
                     <div class="itemTitle">{{ arr[4] }}</div>
@@ -58,9 +58,9 @@
                     <div class="itemTitle">Send data to Google Sheet</div>
                 </div>                   
                 </div> -->
-                <!-- <p>{{ this.$store.state.addTag.selectedData }}</p>
-                <p>{{ this.$store.state.addTag.selectedData[0] }} 2</p>
-                <p>{{ this.$store.state.addTag.selectedData[1] }} 1</p> -->
+                <p>{{ this.$store.state.addTag.selectedData }}</p>
+                <p>{{ this.$store.state.addTag.selectedData[0] }}</p>
+                <p>{{ this.$store.state.addTag.selectedData[1] }} 1</p>
             </section>
 
             </section>

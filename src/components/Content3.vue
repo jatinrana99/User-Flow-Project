@@ -16,8 +16,6 @@
                         <i v-if = " index === 5" class="fa-regular fa-circle" id="purpleC"></i>
                         <i v-if = " index === 6" class="fa-regular fa-circle" id="pinkC"></i>
                         <i v-if = " index === 7" class="fa-regular fa-circle" id="brownC"></i>
-
-                    
                     {{ item }}
                 </div>
                 <i class="fa-regular fa-trash-can" id="tag"></i>

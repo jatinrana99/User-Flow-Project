@@ -46,15 +46,11 @@
                 <i class="fa-solid fa-trash" id="delete"></i>
             </div>
         </section>
-
         <section>
             <p>Request Body</p>
             <textarea name="" id="textArea" cols="30" rows="10" v-model="bodyReq" @click="toggle(index)"></textarea>
         </section>
-    
             <div id="addDetails" v-if="editIndex==index" @click="addData(index)">Add Details</div>
-        
-
         <section id="sectionConfirmation" v-if="showYes==index">
             <v-btn variant="outlined" id="cancel" @click="cancel()">Cancel</v-btn>
             <v-btn id="confirm" @click="confirm()">Confirm</v-btn>
