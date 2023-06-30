@@ -1,17 +1,40 @@
 <template>
     <section id="Frame">
         <section id="DropZone">
-
-
-
-            <section>
+            <section id="inputDisplay">
                 <div class="itemBlock" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1] ">
                     <div id="tagHeading">
                     <i class="fa-solid fa-shield-halved" id="tag"></i>
                     <div class="itemTitle">{{ arr[0] }}</div>
                 </div>
                 </div>
-                
+                <!-- <div>Hello {{ this.$store.state.addTag.selectedData[1] }}</div> -->
+                <section v-for="item in getHttpData" :key="item">
+                    <div class="inputMain">
+                        <p class="inputHeading">Request End Point</p>
+                        <div class="inputVal">{{ item[0] }}</div>
+                    </div>
+                    <div>
+                        <p class="inputHeading">Request Method</p>
+                        <div class="inputVal">{{ item[1] }}</div>
+                    </div>
+                    <section>
+                        <div id="keyValHeading" class="inputMain">
+                            <p class="inputHeading" id="key">Key</p>
+                            <p class="inputHeading" id="value">Value</p>
+                        </div>
+                        <div id="keyValInput" class="inputMain">
+                            <p class="inputVal">{{ item[2] }}</p>
+                            <p class="inputVal">{{ item[3] }}</p>
+                        </div>
+                        
+                    </section>
+                    <div class="inputMain">
+                        <p class="inputHeading">Request Body</p>
+                        <div class="inputVal">{{ item[4] }}</div>
+                    </div>
+                </section>
+
             </section>
 
         </section>
@@ -30,17 +53,52 @@ export default {
     name:`Frame4`,
     data(){
         return{
-            arr:['Make HTTP Request'],
+            arr:['Make HTTPS request'],
         }
     },
     computed:{
         
-        ...mapGetters(['getTagData']),
+        ...mapGetters(['getHttpData']),
     }
 }
 </script>
 
 <style lang="sass" scoped>
+
+.inputHeading
+    font-family: Inter
+    font-size: 16px
+    font-weight: 400
+    line-height: 19px
+    letter-spacing: 0em
+    color: rgba(157, 168, 180, 1)
+    padding-left: 25px
+    padding-top: 15px
+    padding-bottom: 15px
+
+#keyValHeading
+    display: flex
+    gap: 480px
+
+#keyValInput
+    display: flex
+    gap: 480px
+
+
+.inputMain
+    border-top: 1px solid rgba(157, 168, 180, 1)
+
+.inputVal
+    font-family: Inter
+    font-size: 16px
+    font-weight: 400
+    line-height: 19px
+    letter-spacing: 0em
+    text-align: left
+    color: rgba(71, 84, 97, 1)
+    padding-left: 25px
+    padding-top: 15px
+    padding-bottom: 15px
 
 #tagHeading
     display: flex
@@ -60,28 +118,14 @@ export default {
     border: 1px dashed rgba(157, 168, 180, 1)
     background-color: rgba(249, 249, 249, 1)
     
-#DropZoneText
-    width: 290px
-    height: 82px
-    font-family: Poppins
-    font-size: 27px
-    font-weight: 600
-    line-height: 41px
-    letter-spacing: 0em
-    text-align: center
-    color: rgba(194, 204, 214, 1)
-    margin-top: 35%
-    margin-left: 35%
-
 .itemBlock
-    width: 1076px
+    width: 1074px
     height: 69px
-    border-radius: 14px
-    border: 1px solid
+    border-bottom: 1px solid
+    border-top-right-radius: 14px
+    border-top-left-radius: 14px
     color: rgba(227, 229, 232, 1)
     padding: 25px
-    margin-left: 20px
-    margin-top: 16px
     background-color: rgba(255, 255, 255, 1)
 
 #tag
@@ -91,5 +135,15 @@ export default {
 
 .itemTitle
     color: rgba(71, 84, 97, 1)
+
+#inputDisplay
+    // width: 1114px
+    width: 1076px
+    margin-left: 20px
+    margin-top: 16px
+    // height: 908px
+    border-radius: 14px
+    border: 1px solid rgba(0, 82, 255, 1)
+    background-color: rgba(255, 255, 255, 1)
 
 </style>

@@ -127,7 +127,6 @@ export default {
     font-weight: 600
     line-height: 19px
     letter-spacing: 0em
-    text-align: left
     color: rgba(71, 84, 97, 1)
 
 #subTitleText
@@ -136,7 +135,6 @@ export default {
     font-weight: 300
     line-height: 17px
     letter-spacing: 0em
-    text-align: left
     color: rgba(157, 168, 180, 1)
 
 #draggableItemMenu
@@ -154,7 +152,6 @@ export default {
     font-weight: 600
     line-height: 19px
     letter-spacing: 0em
-    text-align: left
     color: rgba(0, 82, 255, 1)
     width: 225px
     height: 19px

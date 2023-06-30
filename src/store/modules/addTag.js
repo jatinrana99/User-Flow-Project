@@ -2,6 +2,7 @@ const state={
     selectedData:[],
     tagData:[],
     status:[],
+    httpData:[],
 };
 const actions ={};
 const  mutations = {
@@ -15,9 +16,13 @@ const  mutations = {
     status: (state,data) => {
         state.status.push(data);
     },
+    httpData: (state,data) => {
+        state.httpData.push(data);
+    },
 };
 const getters = {
     getTagData: (state) => state.tagData,
+    getHttpData: (state) => state.httpData,
 
 };
 
