@@ -5,7 +5,7 @@
 
 
             <section id="inputDisplay">
-                <div class="itemBlockTagCustomer" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1]
+                <div class="itemBlock__TagCustomer" v-if = " arr[0] ===  this.$store.state.addTag.selectedData[1]
                 || arr[0] ===  this.$store.state.addTag.selectedData[2] 
                 || arr[0] ===  this.$store.state.addTag.selectedData[3]
                 || arr[0] ===  this.$store.state.addTag.selectedData[4]
@@ -21,7 +21,7 @@
 
 
 
-                <div v-for="(item , index) in getTagData" :key="index" class="itemBlockTGOption">
+                <div v-for="(item , index) in getTagData" :key="index" class="itemBlock__TGOption">
                 <section class="itemTitle">
                 <div id="text">
                         <i v-if = " index === 0" class="fa-regular fa-circle" id="redC"></i>
@@ -89,10 +89,10 @@
                 </div>
 
             
-                <section id="inputDisplayHTTP">
+                <section id="inputDisplay__HTTP">
 
 
-                    <div class="itemBlockHTTP" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] 
+                    <div class="itemBlock__HTTP" v-if = " arr[4] ===  this.$store.state.addTag.selectedData[1] 
                     || arr[4] ===  this.$store.state.addTag.selectedData[3]
                     || arr[4] ===  this.$store.state.addTag.selectedData[5]
                     || arr[4] ===  this.$store.state.addTag.selectedData[2]
@@ -301,7 +301,7 @@ export default {
 .itemTitle
     color: rgba(71, 84, 97, 1)
 
-.itemBlockTGOption
+.itemBlock__TGOption
     height: 69px
     border-radius: 14px
     border: 1px solid
@@ -310,7 +310,7 @@ export default {
     margin-top: 16px
     background-color: rgba(255, 255, 255, 1)
 
-.itemBlockTagCustomer
+.itemBlock__TagCustomer
     border-radius: 14px
     border: 1px solid
     color: rgba(227, 229, 232, 1)
@@ -348,14 +348,14 @@ export default {
     padding-top: 15px
     padding-bottom: 15px
 
-#inputDisplayHTTP
+#inputDisplay__HTTP
     margin-top: 16px
     border-radius: 14px
     border: 1px solid rgba(157, 168, 180, 1)
     background-color: rgba(255, 255, 255, 1)
 
 
-.itemBlockHTTP
+.itemBlock__HTTP
     height: 69px
     border-radius: 14px
     border: 1px solid

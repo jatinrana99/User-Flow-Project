@@ -2,7 +2,7 @@
     <section id="content">
         <section id="SearchBar">
             <i class="fa-solid fa-magnifying-glass" id="searchIcon" @click="search()"></i>
-            <input type="search" placeholder="Search actions..." id="field" v-model="searchText">
+            <input type="search" placeholder="Search actions..." id="searchBar__field" v-model="searchText">
         </section>
         <section id="ItemMenu"> 
             <p id="heading">Native Popup actions</p>
@@ -163,7 +163,7 @@ export default {
     padding: 22px 22px 0px 22px
 
 
-#field
+#searchBar__field
     color: rgba(157, 168, 180, 1)
     padding : 4px
 
