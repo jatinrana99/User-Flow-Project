@@ -1,7 +1,7 @@
 <template>
     <section id="content">
         <section id="SearchBar">
-            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon" @click="search()"></i>
             <input type="search" placeholder="Search actions..." id="field" v-model="searchText">
         </section>
         <section id="ItemMenu"> 
@@ -54,7 +54,7 @@
                     <i class="fa-brands fa-google-drive"></i>
                     <div class="itemTitle">Send data to Google Sheet</div>
                 </div>
-                    <input type="checkbox" class="check" @click="answer()">
+                    <input type="checkbox" class="check" @click="toggle(index)" v-model="selected" value="Send data to Google Sheet">
                     <br>
                     <br>
                    
@@ -81,7 +81,7 @@ export default {
     data(){
         return{
             searchText:'',
-            arr:['Tag customer','Tag order','Send email notification','Select digital product','Make HTTPS request'],
+            arr:['Tag customer','Tag order','Send email notification','Select digital product','Make HTTPS request','Send data to Google Sheet'],
             editIndex: -1,
             selected:['close'],
         }
@@ -118,6 +118,17 @@ export default {
             router.push({path:'/'})
 
             }
+        },
+        search(){
+            var value = this.searchText;
+            console.log(value);
+            console.log(this.arr);
+            
+            this.arr.find(
+                function(str){
+                    console.log(str==value);
+                    return str == value;
+                })
         }
     }
 }
