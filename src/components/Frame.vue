@@ -24,7 +24,7 @@
                 <div v-for="(item , index) in getTagData" :key="index" class="itemBlock__TGOption">
                 <section class="itemTitle">
                 <div id="text">
-                        <i v-if = " index === 0" class="fa-regular fa-circle" id="redC"></i>
+                        <!-- <i v-if = " index === 0" class="fa-regular fa-circle" id="redC"></i>
                         <i v-if = " index === 1" class="fa-regular fa-circle" id="greenC"></i>
                         <i v-if = " index === 2" class="fa-regular fa-circle" id="blueC"></i>
                         <i v-if = " index === 3" class="fa-regular fa-circle" id="yellowC"></i>
@@ -34,7 +34,47 @@
                         <i v-if = " index === 7" class="fa-regular fa-circle" id="brownC"></i>
 
                     
-                    {{ item }}
+                    {{ item }} -->
+
+
+                    <Frame3Slot>
+                        <template v-slot:red v-if = " index === 0 ">
+                                <i class="fa-regular fa-circle" id="redC"></i>
+                                {{ item }}
+
+                        </template>
+                        <template v-slot:green  v-if = " index === 1 ">
+                            <i class="fa-regular fa-circle" id="greenC"></i>
+                            {{ item }}
+                        </template>
+                        <template v-slot:blue  v-if = " index === 2 ">
+                            <i class="fa-regular fa-circle" id="blueC"></i>
+                            {{ item }}
+                        </template>
+                        <template v-slot:yellow  v-if = " index === 3 ">
+                            <i class="fa-regular fa-circle" id="yellowC"></i>
+                            {{ item }}
+                        </template>
+                        <template v-slot:orange  v-if = "index===4">
+                            <i class="fa-regular fa-circle" id="orangeC"></i>
+                            {{ item }}
+                        </template>
+                        
+                        <template v-slot:purple  v-if = "index===5">
+                            <i class="fa-regular fa-circle" id="purpleC"></i>
+                            {{ item }}
+                        </template>
+                        <template v-slot:pink  v-if = "index===6">
+                            <i class="fa-regular fa-circle" id="purpleC"></i>
+                            {{ item }}
+                        </template>
+                        <template v-slot:brown >
+                            <i v-if = "index===7" class="fa-regular fa-circle" id="purpleC"></i>
+                            {{ item }}
+                        </template>
+                        
+                    </Frame3Slot>
+                       
                 </div>
             </section>
             
@@ -171,6 +211,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import Frame3Slot from './Frame3Slot.vue';
 
 export default {
     name:`Frame`,
@@ -182,7 +223,8 @@ export default {
     computed:{
         
         ...mapGetters(['getTagData','getHttpData']),
-    }
+    },
+    components: { Frame3Slot }
 }
 </script>
 
