@@ -19,11 +19,16 @@ const  mutations = {
     httpData: (state,data) => {
         state.httpData.push(data);
     },
+    deleteTagData: (state,index) => {
+        state.tagData.splice(index,1);
+    }
+        
+
 };
 const getters = {
     getTagData: (state) => state.tagData,
     getHttpData: (state) => state.httpData,
-
+    
 };
 
 export default {

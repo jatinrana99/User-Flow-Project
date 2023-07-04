@@ -18,7 +18,9 @@
                         <i v-if = " index === 7" class="fa-regular fa-circle" id="brownC"></i>
                     {{ item }}
                 </div>
-                <i class="fa-regular fa-trash-can" id="tag"></i>
+                <div >
+                    <i class="fa-regular fa-trash-can" id="tag" @click="deleteTag(index)" :v-model="index"></i>
+                </div>
             </section>
         </div>
     </section>
@@ -42,6 +44,13 @@ export default {
             console.log(this.options);
             this.$store.commit('tagData' , this.option)
             this.option='';
+        },
+        deleteTag(index){
+            console.log(index, "Delete index");
+            this.options.splice(index, 1);
+            console.log(this.options , "Delete");
+            this.$store.commit('deleteTagData' , index)
+            
         }
   
     }
